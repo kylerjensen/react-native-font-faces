@@ -1,0 +1,8 @@
+version: 1
+update_configs:
+  - directory: '/'
+    package_manager: 'javascript'
+    update_schedule: 'weekly'
+    automerged_updates:
+      - match:
+          update_type: 'semver:minor'
