@@ -9,6 +9,9 @@
   "license": "MIT",
   "repository": "https://Kjens93@github.com/Kjens93/react-native-font-faces",
   "description": "Easily emulate @font-face behavior in react-native",
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "react-native",
     "font-family",
@@ -19,18 +22,24 @@
     "expo"
   ],
   "scripts": {
-    "prepublishOnly": "tsc && bob build"
+    "test": "jest",
+    "build": "bob build",
+    "release": "semantic-release"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.0.1",
     "@commitlint/config-conventional": "^9.0.1",
     "@react-native-community/bob": "^0.16.2",
+    "@testing-library/jest-dom": "^5.11.0",
+    "@types/jest": "^26.0.4",
     "@types/react": "^16.9.41",
     "@types/react-native": "^0.62.17",
     "husky": "^4.2.5",
+    "jest": "^26.1.0",
     "prettier": "^2.0.5",
     "pretty-quick": "^2.0.1",
     "semantic-release": "^17.1.1",
+    "ts-jest": "^26.1.1",
     "typescript": "^3.9.6"
   },
   "peerDependencies": {
