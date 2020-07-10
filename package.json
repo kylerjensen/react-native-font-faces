@@ -1,0 +1,46 @@
+{
+  "name": "react-native-font-faces",
+  "version": "0.0.0",
+  "main": "dist/commonjs/index.js",
+  "types": "dist/typescript/index.d.ts",
+  "module": "dist/module/index.js",
+  "react-native": "src/index.ts",
+  "author": "Kyler Jensen <kjens93@users.noreply.github.com>",
+  "license": "MIT",
+  "repository": "https://Kjens93@github.com/Kjens93/react-native-font-faces",
+  "description": "Easily emulate @font-face behavior in react-native",
+  "keywords": [
+    "react-native",
+    "font-family",
+    "font-weight",
+    "font-style",
+    "font-face",
+    "font",
+    "expo"
+  ],
+  "scripts": {
+    "prepublishOnly": "tsc && bob build"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^9.0.1",
+    "@commitlint/config-conventional": "^9.0.1",
+    "@react-native-community/bob": "^0.16.2",
+    "@types/react": "^16.9.41",
+    "@types/react-native": "^0.62.17",
+    "husky": "^4.2.5",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "semantic-release": "^17.1.1",
+    "typescript": "^3.9.6"
+  },
+  "peerDependencies": {
+    "react": ">=16.11.0",
+    "react-native": ">=0.62.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
