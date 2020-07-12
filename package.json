@@ -1,16 +1,14 @@
 {
-  "name": "react-native-font-faces",
+  "name": "react-native-font-face",
   "version": "0.0.0",
   "main": "dist/commonjs/index.js",
   "types": "dist/typescript/index.d.ts",
   "module": "dist/module/index.js",
-  "react-native": "src/index.ts",
   "author": "Kyler Jensen <kjens93@users.noreply.github.com>",
   "license": "MIT",
   "repository": "https://Kjens93@github.com/Kjens93/react-native-font-faces",
   "description": "Easily emulate @font-face behavior in react-native",
   "files": [
-    "src",
     "dist"
   ],
   "keywords": [
@@ -25,16 +23,17 @@
   "scripts": {
     "test": "jest",
     "build": "bob build",
-    "release": "semantic-release"
+    "release": "semantic-release",
+    "barrels": "barrelsby -c barrels.config.js"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.0.1",
     "@commitlint/config-conventional": "^9.0.1",
     "@react-native-community/bob": "^0.16.2",
-    "@testing-library/jest-dom": "^5.11.0",
     "@types/jest": "^26.0.4",
     "@types/react": "^16.9.41",
     "@types/react-native": "^0.62.17",
+    "barrelsby": "^2.2.0",
     "husky": "^4.2.5",
     "jest": "^26.1.0",
     "prettier": "^2.0.5",
