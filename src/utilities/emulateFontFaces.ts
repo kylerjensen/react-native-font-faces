@@ -5,9 +5,9 @@ import { FontFace } from '../types/FontFace';
 
 const originalRenderFn = (Text as any).render;
 
-class FontManager {
-  constructor(private fontFaces: FontFace[]) {}
+let globalFontFaces: FontFace[] = [];
 
+class FontManager {
   applyOverrides() {
     (Text as any).render = this.overrideRenderFn;
   }
@@ -15,12 +15,13 @@ class FontManager {
   overrideRenderFn(...args: any[]) {
     const element = originalRenderFn.call(this, ...args);
     const originalStyle: TextStyle = StyleSheet.flatten([element.props.style]);
-    const overrideStyle: TextStyle = generateOverrideStyle(this.fontFaces, originalStyle);
+    const overrideStyle: TextStyle = generateOverrideStyle(globalFontFaces, originalStyle);
     const flattenedStyle: TextStyle = StyleSheet.flatten([originalStyle, overrideStyle]);
     return React.cloneElement(element, { style: flattenedStyle });
   }
 }
 
 export function emulateFontFaces(fontFaces: FontFace[]) {
-  new FontManager(fontFaces).applyOverrides();
+  globalFontFaces = fontFaces;
+  new FontManager().applyOverrides();
 }
