@@ -6,7 +6,7 @@ This library provides full support for the `fontWeight`, `fontStyle`, and `fontF
 
 #### Before:
 
-```tsx
+```jsx
 import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
 
 #### After:
 
-```tsx
+```jsx
 import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
 
 2. Create a list of `FontFace`s:
 
-   ```tsx
+   ```jsx
    // App.tsx
    import * as React from 'react';
    import { FontFace, FontFacesProvider } from 'react-native-font-faces';
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
 
    or use one of the provided samples:
 
-   ```tsx
+   ```jsx
    // App.tsx
    import * as React from 'react';
    import { Roboto_Regular, Roboto_Italic, Roboto_Thin, FontFacesProvider } from 'react-native-font-faces';
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
 
 3. Wrap your applcation's root component with a `<FontFacesProvider />`, import your font faces, and choose a native font loader:
 
-   ```tsx
+   ```jsx
    // App.tsx
    import * as React from 'react';
    import * as Fonts from 'expo-font';
