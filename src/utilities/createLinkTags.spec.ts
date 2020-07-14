@@ -1,5 +1,5 @@
 import { createLinkTags } from './createLinkTags';
-import { Roboto_All, Roboto_All_UnifiedWebfont, Roboto_All_NoWebfonts } from '../samples/roboto';
+import { Roboto_All, Roboto_All_UnifiedWebfont, Roboto_All_NoWebfonts } from '../samples/Roboto';
 
 describe('createLinkTags', () => {
   it('should only create <link/> tags for font faces with webfonts', () => {

@@ -4,7 +4,7 @@ import {
   Roboto_All_NoWebfonts,
   Roboto_All_NameOnly,
   Roboto_All_FamilyOnly as Roboto_All_NoNames,
-} from '../samples/roboto';
+} from '../samples/Roboto';
 
 describe('createStyleTags', () => {
   it('should ignore font faces with webfonts', () => {

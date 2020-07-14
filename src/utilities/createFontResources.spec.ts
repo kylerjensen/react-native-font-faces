@@ -1,5 +1,5 @@
 import { createFontResources } from './createFontResources';
-import { Roboto_All } from '../samples/roboto';
+import { Roboto_All } from '../samples/Roboto';
 
 describe('createFontResources', () => {
   it('should properly convert a list of FontFaces to a FontResources object', () => {

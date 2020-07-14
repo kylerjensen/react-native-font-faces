@@ -1,5 +1,5 @@
 import { generateOverrideStyle } from './generateOverrideStyle';
-import { Roboto_All } from '../samples/roboto';
+import { Roboto_All } from '../samples/Roboto';
 import { TextStyle } from 'react-native';
 
 describe('generateOverrideStyle', () => {

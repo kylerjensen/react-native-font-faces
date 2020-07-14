@@ -14,7 +14,7 @@ import {
   Roboto_MediumItalic,
   Roboto_BoldItalic,
   Roboto_BlackItalic,
-} from '../samples/roboto';
+} from '../samples/Roboto';
 
 describe('matchFontFace', () => {
   it('should not find a match for empty input', () => {
