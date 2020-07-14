@@ -38,6 +38,9 @@ jobs:
       - name: Run tests
         run: yarn test
 
+      - name: Build barrels
+        run: yarn barrels
+
       - name: Compile sources
         run: yarn build
 
