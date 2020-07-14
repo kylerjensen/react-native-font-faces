@@ -1,9 +1,14 @@
 import React, { FC, useEffect } from 'react';
 import { FontFacesProviderProps } from './FontFacesProviderProps';
 import { createFontResources } from '../utilities/createFontResources';
+import { emulateFontFaces } from '../utilities/emulateFontFaces';
 
 export const FontFacesProvider: FC<FontFacesProviderProps> = props => {
   const { fontFaces, children, onFontsLoaded, nativeFontLoader } = props;
+
+  useEffect(() => {
+    emulateFontFaces(fontFaces);
+  }, [fontFaces]);
 
   useEffect(() => {
     if (nativeFontLoader) {
@@ -14,5 +19,6 @@ export const FontFacesProvider: FC<FontFacesProviderProps> = props => {
       onFontsLoaded?.();
     }
   }, [fontFaces, nativeFontLoader]);
+
   return <>{children}</>;
 };
