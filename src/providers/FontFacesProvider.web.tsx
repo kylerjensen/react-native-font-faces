@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import { FontFacesProviderProps } from './FontFacesProviderProps';
 import { createStyleTags } from '../utilities/createStyleTags';
 import { createLinkTags } from '../utilities/createLinkTags';
