@@ -1,5 +1,5 @@
 {
-  "name": "react-native-font-face",
+  "name": "react-native-font-faces",
   "version": "0.0.0",
   "main": "dist/commonjs/index.js",
   "types": "dist/typescript/index.d.ts",
@@ -7,7 +7,7 @@
   "author": "Kyler Jensen <kjens93@users.noreply.github.com>",
   "license": "MIT",
   "repository": "https://Kjens93@github.com/Kjens93/react-native-font-faces",
-  "description": "Easily emulate @font-face behavior in react-native",
+  "description": "Easily emulate CSS @font-face behavior in react-native",
   "files": [
     "dist"
   ],

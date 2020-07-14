@@ -1,29 +1,24 @@
-import { FontDisplay } from './FontDisplay';
-import { FontWeight } from './FontWeight';
 import { FontStyle } from './FontStyle';
+import { FontWeight } from './FontWeight';
 import { FontSource } from './FontSource';
+import { FontDisplay } from './FontDisplay';
+
 /**
  * Specifies a named font, it's font family, it's style attributes, and the URL where it can be found.
  *
  * @example
- * const robotoRegular: FontFace = {
- *   fontName: 'Roboto-Regular',
+ * const Roboto_Regular: FontFace = {
+ *   fontFamily: 'Roboto',
  *   fontStyle: 'normal',
  *   fontWeight: '400',
- *   fontFamily: 'Roboto',
- *   fontDisplay: 'auto',
- *   src: {
- *     uri: 'https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2',
- *     format: 'woff2',
- *   },
+ *   fontDisplay: 'swap',
+ *   src: { ... },
  * };
  */
-
 export interface FontFace {
-  fontName: string;
+  fontFamily: string;
   fontStyle: FontStyle;
   fontWeight: FontWeight;
-  fontFamily: string;
   fontDisplay: FontDisplay;
   src: FontSource;
 }

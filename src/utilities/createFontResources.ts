@@ -3,11 +3,10 @@ import { FontFace } from '../types/FontFace';
 
 export function createFontResources(fontFaces: FontFace[]) {
   const result: FontResources = {};
-  fontFaces.forEach(fontFace => {
-    result[fontFace.fontName] = {
-      uri: fontFace.src.uri,
-      display: fontFace.fontDisplay,
-    };
-  });
+  for (const { src } of fontFaces) {
+    if (src.name && src.url) {
+      result[src.name] = src.url;
+    }
+  }
   return result;
 }

@@ -1,3 +1,1 @@
-import { FontResource } from './FontResource';
-
-export type FontResources = Record<string, FontResource>;
+export type FontResources = Record<string, string>;
