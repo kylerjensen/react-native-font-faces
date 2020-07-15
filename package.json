@@ -26,6 +26,13 @@
     "release": "semantic-release",
     "barrels": "barrelsby -c barrels.config.js"
   },
+  "dependencies": {
+    "shortid": "^2.2.15"
+  },
+  "peerDependencies": {
+    "react": ">=16.11.0",
+    "react-native": ">=0.62.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^9.0.1",
     "@commitlint/config-conventional": "^9.0.1",
@@ -33,6 +40,7 @@
     "@types/jest": "^26.0.4",
     "@types/react": "^16.9.41",
     "@types/react-native": "^0.62.17",
+    "@types/shortid": "^0.0.29",
     "barrelsby": "^2.2.0",
     "husky": "^4.2.5",
     "jest": "^26.1.0",
@@ -41,10 +49,6 @@
     "semantic-release": "^17.1.1",
     "ts-jest": "^26.1.1",
     "typescript": "^3.9.6"
-  },
-  "peerDependencies": {
-    "react": ">=16.11.0",
-    "react-native": ">=0.62.0"
   },
   "husky": {
     "hooks": {
