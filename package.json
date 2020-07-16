@@ -5,18 +5,18 @@
   "repository": "https://github.com/Kjens93/react-native-font-faces.git",
   "author": "Kyler Jensen <kjens93@users.noreply.github.com>",
   "license": "MIT",
-  "main": "dist/index.js",
-  "module": "src/index.ts",
-  "typings": "dist/index.d.ts",
+  "main": "dist/commonjs/index.js",
+  "module": "dist/module/index.js",
+  "source": "src/index.ts",
+  "typings": "dist/typescript/index.d.ts",
+  "react-native": "src/index.ts",
   "files": [
+    "src",
     "dist"
   ],
   "scripts": {
     "test": "jest",
-    "clean": "rm -rf dist",
-    "build": "yarn clean && yarn build-typings && yarn build-sources",
-    "build-typings": "tsc -outDir dist -p ./tsconfig.build.json",
-    "build-sources": "babel src -x '.ts,.tsx' --out-dir dist --config-file ./babel.config.build.js",
+    "build": "bob build",
     "prepublishOnly": "yarn build"
   },
   "peerDependencies": {
@@ -24,10 +24,10 @@
     "react-native": ">=0.62.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
     "@babel/core": "^7.10.5",
     "@commitlint/cli": "^9.1.1",
     "@commitlint/config-conventional": "^9.1.1",
+    "@react-native-community/bob": "^0.16.2",
     "@types/jest": "^26.0.4",
     "@types/react": "^16.9.43",
     "@types/react-native": "^0.62.0",
