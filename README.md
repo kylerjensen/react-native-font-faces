@@ -14,7 +14,7 @@ const style: ViewStyle = {
 };
 ```
 
-This makes it difficult to achieve merged styles or text style composition. Apreferable solution might be something like this:
+This makes it difficult to achieve merged styles or text style composition. A preferable solution might be something like this:
 
 ```jsx
 const style: ViewStyle = {
