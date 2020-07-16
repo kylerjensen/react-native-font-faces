@@ -2,6 +2,30 @@
 
 Easily emulate @font-face behavior in react-native.
 
+## Motivation:
+
+Using custom fonts in React Native becomes complicated when trying to work with different font weights and styles. Even though the React Native `TextStyle` type includes properties for `fontFamily`, `fontWeight` and `fontStyle`, these properties seem to work only for the default built-in fonts, and have limited support when using custom fonts. For this reason, selecting a specific font weight and style is traditionally achieved by specifying the exact PostScript name of the desired loaded font file.
+
+For example:
+
+```jsx
+const style: ViewStyle = {
+  fontFamily: 'Roboto-MediumItalic',
+};
+```
+
+This makes it difficult to achieve merged styles or text style composition. Apreferable solution might be something like this:
+
+```jsx
+const style: ViewStyle = {
+  fontFamily: 'Roboto',
+  fontWeight: '500',
+  fontStyle: 'italic',
+};
+```
+
+This library aims to make life easier by allowing React Native developers to use `fontWeight` and `fontStyle` with custom fonts on iOS, Android, and Web.
+
 ## Getting Started
 
 To use this library, add the dependency to your application's `package.json`:
