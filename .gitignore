@@ -1,5 +1,9 @@
+# npm and yarn
 node_modules/
-dist/
 *.log
 
+# macOS
 .DS_Store
+
+# @react-native-community/bob
+dist/

@@ -6,3 +6,9 @@ update_configs:
     automerged_updates:
       - match:
           update_type: 'semver:minor'
+  - directory: 'example/'
+    package_manager: 'javascript'
+    update_schedule: 'weekly'
+    automerged_updates:
+      - match:
+          update_type: 'semver:minor'
