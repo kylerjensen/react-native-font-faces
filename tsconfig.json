@@ -14,5 +14,6 @@
       "react-native-font-faces": ["./src/index"]
     }
   },
-  "exclude": ["dist/**/*"]
+  "include": ["src/**/*", "example/**/*"],
+  "exclude": ["dist/**/*", "node_modules/**/*", "example/node_modules/**/*"]
 }

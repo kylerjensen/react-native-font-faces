@@ -17,7 +17,9 @@
   "scripts": {
     "test": "jest",
     "build": "bob build",
-    "release": "semantic-release"
+    "start": "yarn example start",
+    "release": "semantic-release",
+    "example": "cd example && yarn"
   },
   "peerDependencies": {
     "react": ">=16.9.0",
