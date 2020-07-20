@@ -26,7 +26,7 @@
     "@use-expo/font": "^2.0.0",
     "expo-font": "^8.2.1",
     "react-refresh": "^0.8.3",
-    "typescript": "~3.9.5"
+    "typescript": "~3.9.7"
   },
   "private": true
 }
