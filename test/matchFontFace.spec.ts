@@ -1,4 +1,4 @@
-import { matchFontFace } from '../src/native/matchFontFace';
+import { matchFontFace } from '../src/utilities/matchFontFace';
 
 import {
   Roboto_All,
