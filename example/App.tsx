@@ -1,31 +1,13 @@
 import React from 'react';
+import * as Font from 'expo-font';
 import { Helmet } from 'react-helmet';
-import { StatusBar } from 'expo-status-bar';
-import { useFonts } from '@use-expo/font';
 import { AppLoading } from 'expo';
-import { StyleSheet, Text, View, Platform } from 'react-native';
-import { enableFontFaces, Roboto_All } from 'react-native-font-faces';
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
+import { FontFacesProvider, useFontFaces, Roboto_All } from 'react-native-font-faces';
 
-enableFontFaces(Roboto_All);
-
-export default function App() {
-  const [fontsLoaded] = Platform.select({
-    web: [true], // Only load font files this way for native apps. Use a webfont instead for web apps (see below).
-    default: useFonts({
-      'Roboto-Black': require('./assets/fonts/Roboto-Black.ttf'),
-      'Roboto-BlackItalic': require('./assets/fonts/Roboto-BlackItalic.ttf'),
-      'Roboto-Bold': require('./assets/fonts/Roboto-Bold.ttf'),
-      'Roboto-BoldItalic': require('./assets/fonts/Roboto-BoldItalic.ttf'),
-      'Roboto-Italic': require('./assets/fonts/Roboto-Italic.ttf'),
-      'Roboto-Light': require('./assets/fonts/Roboto-Light.ttf'),
-      'Roboto-LightItalic': require('./assets/fonts/Roboto-LightItalic.ttf'),
-      'Roboto-Medium': require('./assets/fonts/Roboto-Medium.ttf'),
-      'Roboto-MediumItalic': require('./assets/fonts/Roboto-MediumItalic.ttf'),
-      'Roboto-Regular': require('./assets/fonts/Roboto-Regular.ttf'),
-      'Roboto-Thin': require('./assets/fonts/Roboto-Thin.ttf'),
-      'Roboto-ThinItalic': require('./assets/fonts/Roboto-ThinItalic.ttf'),
-    }),
-  });
+const AppContent = () => {
+  const [fontsLoaded] = useFontFaces(Roboto_All);
 
   if (fontsLoaded) {
     return (
@@ -48,6 +30,14 @@ export default function App() {
   } else {
     return <AppLoading />;
   }
+};
+
+export default function App() {
+  return (
+    <FontFacesProvider nativeFontLoader={Font.loadAsync}>
+      <AppContent />
+    </FontFacesProvider>
+  );
 }
 
 const styles = StyleSheet.create({

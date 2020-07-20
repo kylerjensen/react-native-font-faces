@@ -1,4 +1,4 @@
-import { generateOverrideStyle } from '../src/native/generateOverrideStyle';
+import { generateOverrideStyle } from '../src/utilities/generateOverrideStyle';
 import { Roboto_All } from '../src/samples/Roboto';
 import { TextStyle } from 'react-native';
 

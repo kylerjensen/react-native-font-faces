@@ -1,4 +1,4 @@
-import { normalizeFontWeight } from '../src/native/normalizeFontWeight';
+import { normalizeFontWeight } from '../src/utilities/normalizeFontWeight';
 
 describe('normalizeFontWeight', () => {
   it('should normalize 100', () => {
