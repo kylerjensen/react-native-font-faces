@@ -7,5 +7,7 @@ export function extractLocalFontName(fontFace: FontFace) {
       return source.name;
     }
   }
-  throw new Error(`Invalid font face (missing required local() entry in src attribute): ${JSON.stringify(fontFace)}`);
+  throw new Error(
+    `Invalid font face: ${fontFace.fontFamily}@${fontFace.fontWeight},${fontFace.fontStyle} (missing required 'local()' entry in 'src')`
+  );
 }

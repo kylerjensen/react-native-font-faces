@@ -1,7 +1,7 @@
 import React from 'react';
-import { Text, TextStyle, StyleSheet } from 'react-native';
 import { globalFontFaces } from './globalFontFaces';
 import { generateOverrideStyle } from './generateOverrideStyle';
+import { Text, TextStyle, StyleSheet } from 'react-native';
 
 const originalRenderFn = (Text as any).render;
 
