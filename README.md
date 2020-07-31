@@ -41,7 +41,7 @@ This library aims to make life easier by allowing React Native developers to use
    yarn add -D @types/react-helmet
    ```
 
-2. Wrap your application's root component in a `<FontFacesProvider />` and provide a `FontLoader`:
+2. Wrap your application's root component in a `<FontFacesProvider />`, provide a `FontLoader`, and import the desired font faces:
 
    ```jsx
    // App.tsx
@@ -67,13 +67,12 @@ This library aims to make life easier by allowing React Native developers to use
    }
    ```
 
-3. Call `useFontFaces()` to import and the font faces you'd like to use and download corresponding font files:
+3. Just use the font family as you would normally expect:
 
    ```jsx
    // AppContent.tsx
 
    import React from 'react';
-   import { Helmet } from 'react-helmet';
    import { AppLoading } from 'expo';
 
    export function AppContent(props: any) {}
@@ -84,9 +83,6 @@ This library aims to make life easier by allowing React Native developers to use
      } else {
        return (
          <View style={styles.container}>
-           <Helmet>
-             <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900" rel="stylesheet" />
-           </Helmet>
            <Text style={styles.text}>This should be Regular</Text>
            <Text style={[styles.text, styles.italic]}>This should be Italic</Text>
            <Text style={[styles.text, styles.bold]}>This should be Bold</Text>
