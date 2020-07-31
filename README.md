@@ -86,7 +86,7 @@ This library aims to make life easier by allowing React Native developers to use
            <Text style={styles.text}>This should be Regular</Text>
            <Text style={[styles.text, styles.italic]}>This should be Italic</Text>
            <Text style={[styles.text, styles.bold]}>This should be Bold</Text>
-        <Text style={[styles.text, styles.bold, styles.italic]}>This should be BoldItalic</Text>
+           <Text style={[styles.text, styles.bold, styles.italic]}>This should be BoldItalic</Text>
            <Text style={[styles.text, styles.thin]}>This should be Thin</Text>
            <Text style={[styles.text, styles.thin, styles.italic]}>This should be ThinItalic</Text>
            <StatusBar style="auto" />
