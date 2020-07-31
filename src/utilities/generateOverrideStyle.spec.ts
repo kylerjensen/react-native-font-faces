@@ -1,6 +1,6 @@
-import { generateOverrideStyle } from '../src/utilities/generateOverrideStyle';
-import { Roboto_All } from '../src/samples/Roboto';
 import { TextStyle } from 'react-native';
+import { Roboto_All } from '../samples/Roboto';
+import { generateOverrideStyle } from './generateOverrideStyle';
 
 describe('generateOverrideStyle', () => {
   it('should ignore the text style for non-matching font families', () => {

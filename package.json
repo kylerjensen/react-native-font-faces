@@ -1,15 +1,14 @@
 {
   "name": "react-native-font-faces",
-  "version": "0.0.0",
-  "description": "Easily emulate @font-face behavior in react-native",
-  "repository": "https://github.com/Kjens93/react-native-font-faces.git",
-  "author": "Kyler Jensen <kjens93@users.noreply.github.com>",
-  "license": "MIT",
   "main": "dist/commonjs/index.js",
   "module": "dist/module/index.js",
-  "source": "src/index.ts",
+  "author": "Kyler Jensen <kjens93@users.noreply.github.com>",
   "typings": "dist/typescript/index.d.ts",
+  "license": "MIT",
+  "version": "0.0.0",
   "react-native": "src/index.ts",
+  "repository": "https://github.com/Kjens93/react-native-font-faces.git",
+  "description": "Easily emulate @font-face behavior in react-native",
   "files": [
     "src",
     "dist"
@@ -17,36 +16,36 @@
   "scripts": {
     "test": "jest",
     "build": "bob build",
-    "start": "yarn example start",
-    "release": "semantic-release",
-    "example": "cd example && yarn"
+    "release": "semantic-release"
+  },
+  "dependencies": {
+    "react-helmet": "^6.1.0",
+    "redent": "^3.0.0",
+    "ts-dedent": "^1.1.1"
   },
   "peerDependencies": {
-    "react": ">=16.9.0",
-    "react-native": ">=0.60.0"
+    "react": "^16.11.0",
+    "react-native": "~0.60.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.5",
+    "@babel/core": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-typescript": "^7.10.4",
     "@commitlint/cli": "^9.1.1",
     "@commitlint/config-conventional": "^9.1.1",
     "@react-native-community/bob": "^0.16.2",
-    "@types/jest": "^26.0.4",
+    "@types/jest": "^26.0.8",
     "@types/react": "^16.9.43",
-    "@types/react-native": "^0.62.0",
+    "@types/react-helmet": "^6.0.0",
+    "@types/react-native": "~0.62.0",
     "babel-jest": "^26.1.0",
+    "babel-plugin-module-resolver": "^4.0.0",
     "husky": "^4.2.5",
     "jest": "^26.1.0",
-    "metro-react-native-babel-preset": "^0.60.0",
+    "metro-react-native-babel-preset": "^0.61.0",
     "prettier": "^2.0.5",
     "pretty-quick": "^2.0.1",
     "semantic-release": "^17.1.1",
-    "typescript": "^3.9.6"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
-  "dependencies": {}
+    "typescript": "^3.9.7"
+  }
 }

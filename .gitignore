@@ -1,5 +1,7 @@
 # npm and yarn
 node_modules/
+coverage/
+npm-debug.*
 *.log
 
 # macOS
@@ -7,3 +9,14 @@ node_modules/
 
 # @react-native-community/bob
 dist/
+
+# expo
+.expo/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+__generated__/

@@ -3,7 +3,7 @@ const package = require('../package.json');
 
 const moduleResolverConfig = {
   alias: {
-    [package.name]: path.join(__dirname, '..', package.source),
+    [package.name]: path.join(__dirname, '..', 'src'),
   },
 };
 

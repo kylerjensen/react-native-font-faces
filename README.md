@@ -41,7 +41,7 @@ This library aims to make life easier by allowing React Native developers to use
    yarn add -D @types/react-helmet
    ```
 
-2. Wrap your application's root component in a `<FontFacesProvider />`:
+2. Wrap your application's root component in a `<FontFacesProvider />` and provide a `FontLoader`:
 
    ```jsx
    // App.tsx
@@ -49,12 +49,19 @@ This library aims to make life easier by allowing React Native developers to use
    import React from 'react';
    import * as Font from 'expo-font';
    import { AppContent } from './AppContent';
-   import { FontFacesProvider } from 'react-native-font-faces';
+   import { FontFacesProvider, FontLoader, Roboto_All } from 'react-native-font-faces';
 
    export default function App() {
+     const [error, setError] = React.useState<Error>();
+     const [loading, setLoading] = React.useState<boolean>(true);
+
      return (
-       <FontFacesProvider nativeFontLoader={Font.loadAsync}>
-         <AppContent />
+       <FontFacesProvider
+         onError={setError}
+         onLoading={setLoading}
+         fontFaces={Roboto_All}
+         nativeFontLoader={Font.loadAsync}>
+         <AppContent loading={loaading} error={error} />
        </FontFacesProvider>
      );
    }
@@ -68,11 +75,13 @@ This library aims to make life easier by allowing React Native developers to use
    import React from 'react';
    import { Helmet } from 'react-helmet';
    import { AppLoading } from 'expo';
-   import { useFontFaces, Roboto_All } from 'react-native-font-faces';
 
-   export function AppContent() {}
-     const [fontsLoaded] = useFontFaces(Roboto_All);
-     if (fontsLoaded) {
+   export function AppContent(props: any) {}
+     if (props.loading) {
+       return <AppLoading />;
+     } else if (props.error) {
+       return <Text>{props.error.message}</Text>
+     } else {
        return (
          <View style={styles.container}>
            <Helmet>
@@ -87,8 +96,6 @@ This library aims to make life easier by allowing React Native developers to use
            <StatusBar style="auto" />
          </View>
        );
-     } else {
-       return <AppLoading />;
      }
    }
 
@@ -113,6 +120,13 @@ This library aims to make life easier by allowing React Native developers to use
      },
    });
    ```
+
+## Migrating from 2.x
+
+In version 3.x, we simplified `FontFacesProvider` and removed `useFontFaces`. Follow these steps to migrate:
+
+1. Remove all instances of `useFontFaces()`.
+2. Update your application's `<FontFacesProvider/>` to provide the `onLoading` and `onError` props (optional).
 
 ## Migrating from 1.x
 

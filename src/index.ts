@@ -1,5 +1,3 @@
-export * from './hooks/useFontFaces';
-
 export * from './types/FontFace';
 export * from './types/FontLoader';
 export * from './types/FontSource';

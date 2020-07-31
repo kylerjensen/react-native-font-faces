@@ -5,7 +5,7 @@ import { FontWeight } from '../types/FontWeight';
 import { normalizeFontWeight } from './normalizeFontWeight';
 
 /**
- * Uses a font matching algorithm to choose, from the list of given font faces,
+ * Uses a font matching algorithm to choose from the list of given font faces,
  * the most appropriate font face (if any) to use for the given text style.
  *
  * @see https://www.w3.org/TR/CSS2/fonts.html
@@ -28,8 +28,8 @@ export function compareFontWeightDistance(a: FontFace, b: FontFace, textStyle: T
   const bDistance = fontWeightDistance(b, textStyle.fontWeight);
   if (aDistance === bDistance) return 0;
   else if (aDistance < bDistance) return -1;
-  else if (bDistance < aDistance) return 1;
-  else return 0; // should never happen, but makes the code line up nice
+  else if (aDistance > bDistance) return 1;
+  else return 0;
 }
 
 function compareFontStyleExactMatch(a: FontFace, b: FontFace, textStyle: TextStyle): number {
