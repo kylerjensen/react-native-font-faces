@@ -4,8 +4,9 @@ import { overrideTextRenderFn } from './overrideTextRenderFn';
 import { registerGlobalFontFaces } from './registerGlobalFontFaces';
 import { overrideTextInputRenderFn } from './overrideTextInputRenderFn';
 import { getDynamicFontList } from './getDynamicFontList';
+import { EnableFontFacesResult } from 'src/types/EnableFontFacesResult';
 
-export function enableFontFaces(fontFaces: FontFace[]) {
+export function enableFontFaces(fontFaces: FontFace[]): EnableFontFacesResult {
   overrideTextRenderFn();
   overrideTextInputRenderFn();
   registerGlobalFontFaces(fontFaces);
