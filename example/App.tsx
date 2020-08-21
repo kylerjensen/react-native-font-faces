@@ -3,12 +3,12 @@ import { useFonts } from 'expo-font';
 import { AppLoading } from 'expo';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { Roboto_All, enableFontFaces } from 'react-native-font-faces';
+import { Roboto_All, enableFontFaces, getExpoFontMap } from 'react-native-font-faces';
 
-const fonts = enableFontFaces(Roboto_All).expo;
+enableFontFaces(Roboto_All);
 
 export default function App() {
-  const [loaded, error] = useFonts(fonts);
+  const [loaded, error] = useFonts(getExpoFontMap(Roboto_All));
 
   if (!loaded) {
     return <AppLoading />;

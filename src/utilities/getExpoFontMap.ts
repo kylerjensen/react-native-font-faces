@@ -1,7 +1,7 @@
 import { FontFace } from '../types/FontFace';
+import { ExpoFontMap } from 'src/types/ExpoFontMap';
 import { getLocalFontName } from './getLocalFontName';
 import { getExpoFontMapEntry } from './getExpoFontMapEntry';
-import { ExpoFontMap } from 'src/types/ExpoFontMap';
 
 export function getExpoFontMap(fontFaces: FontFace[]): ExpoFontMap {
   const obj: ExpoFontMap = {};

@@ -1,9 +1,6 @@
 import { FontFace } from '../types/FontFace';
-import { getLocalFontName } from './getLocalFontName';
-import { getExpoFontMapEntry } from './getExpoFontMapEntry';
-import { ExpoFontMap } from 'src/types/ExpoFontMap';
-import { getDynamicFontListEntry } from './getDynamicFontListEntry';
 import { DynamicFontList } from 'src/types/DynamicFontList';
+import { getDynamicFontListEntry } from './getDynamicFontListEntry';
 
 export function getDynamicFontList(fontFaces: FontFace[]): DynamicFontList {
   const list: DynamicFontList = [];
