@@ -40,7 +40,7 @@ This library aims to make life easier by allowing React Native developers to use
    yarn add expo-font
    ```
 
-2. Wrap your application's root component in a `<FontFacesProvider />`, provide a `FontLoader`, and import the desired font faces. Then just use the font family as you would normally expect:
+2. Add a call to `enableFontFaces()` in your application's entry point, and import the desired font faces. Then just use the font family as you would normally expect:
 
    ```jsx
    // App.tsx
