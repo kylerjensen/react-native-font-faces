@@ -19,7 +19,6 @@
     "release": "semantic-release"
   },
   "dependencies": {
-    "react-helmet": "^6.1.0",
     "redent": "^3.0.0",
     "ts-dedent": "^1.1.1"
   },
@@ -36,7 +35,6 @@
     "@react-native-community/bob": "^0.16.2",
     "@types/jest": "^26.0.8",
     "@types/react": "^16.9.43",
-    "@types/react-helmet": "^6.0.0",
     "@types/react-native": "~0.62.0",
     "babel-jest": "^26.1.0",
     "babel-plugin-module-resolver": "^4.0.0",

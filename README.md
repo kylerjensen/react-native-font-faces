@@ -37,59 +37,39 @@ This library aims to make life easier by allowing React Native developers to use
    If you are using Expo and need to load additional custom font files into your app, also add the following:
 
    ```shell
-   yarn add expo-font react-helmet
-   yarn add -D @types/react-helmet
+   yarn add expo-font
    ```
 
-2. Wrap your application's root component in a `<FontFacesProvider />`, provide a `FontLoader`, and import the desired font faces:
+2. Wrap your application's root component in a `<FontFacesProvider />`, provide a `FontLoader`, and import the desired font faces. Then just use the font family as you would normally expect:
 
    ```jsx
    // App.tsx
 
    import React from 'react';
-   import * as Font from 'expo-font';
+   import { useFonts } from 'expo-font';
+   import { AppLoading } from 'expo';
    import { AppContent } from './AppContent';
-   import { FontFacesProvider, FontLoader, Roboto_All } from 'react-native-font-faces';
+   import { Roboto_All, enableFontFaces, getRemoteFontUrls } from 'react-native-font-faces';
+
+   const fonts = enableFontFaces(Roboto_All).expo;
 
    export default function App() {
-     const [error, setError] = React.useState<Error>();
-     const [loading, setLoading] = React.useState<boolean>(true);
+     const [loaded, error] = useFonts(fonts);
 
-     return (
-       <FontFacesProvider
-         onError={setError}
-         onLoading={setLoading}
-         fontFaces={Roboto_All}
-         nativeFontLoader={Font.loadAsync}>
-         <AppContent loading={loaading} error={error} />
-       </FontFacesProvider>
-     );
-   }
-   ```
-
-3. Just use the font family as you would normally expect:
-
-   ```jsx
-   // AppContent.tsx
-
-   import React from 'react';
-   import { AppLoading } from 'expo';
-
-   export function AppContent(props: any) {}
-     if (props.loading) {
+     if (!loaded) {
        return <AppLoading />;
-     } else if (props.error) {
-       return <Text>{props.error.message}</Text>
+     } else if (error) {
+       return <Text>{error.message}</Text>;
      } else {
        return (
          <View style={styles.container}>
+           <StatusBar style="auto" />
            <Text style={styles.text}>This should be Regular</Text>
            <Text style={[styles.text, styles.italic]}>This should be Italic</Text>
            <Text style={[styles.text, styles.bold]}>This should be Bold</Text>
            <Text style={[styles.text, styles.bold, styles.italic]}>This should be BoldItalic</Text>
            <Text style={[styles.text, styles.thin]}>This should be Thin</Text>
            <Text style={[styles.text, styles.thin, styles.italic]}>This should be ThinItalic</Text>
-           <StatusBar style="auto" />
          </View>
        );
      }
@@ -116,6 +96,14 @@ This library aims to make life easier by allowing React Native developers to use
      },
    });
    ```
+
+## Migrating from 3.x
+
+In version 4.x, we removed `FontFacesProvider` and added `enableFontFaces`. Follow these steps to migrate:
+
+1. Remove all instances of `<FontFacesProvider />`.
+2. Add a call to `enableFontFaces()` in your application's entrypoint.
+3. (Optional) Add a call to `useFonts()` (expo-font) or `loadFonts()` (react-native-dynamic-fonts) to dynamically load remote fonts.
 
 ## Migrating from 2.x
 

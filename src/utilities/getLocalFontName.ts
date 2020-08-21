@@ -1,7 +1,7 @@
 import { FontFace } from '../types/FontFace';
 import { explodeToArray } from './explodeToArray';
 
-export function extractLocalFontName(fontFace: FontFace) {
+export function getLocalFontName(fontFace: FontFace) {
   for (const source of explodeToArray(fontFace.src)) {
     if (source.type === 'local') {
       return source.name;

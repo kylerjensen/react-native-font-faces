@@ -8,7 +8,7 @@ describe('generateInlineStyle', () => {
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 400;
-        font-display: swap;
+        font-display: auto;
         src: local('Roboto'), local('Roboto-Regular'), url(https://ff.static.1001fonts.net/r/o/roboto.regular.ttf) format('truetype');
       }"
     `);

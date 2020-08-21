@@ -5,7 +5,7 @@ import { Text, TextStyle, StyleSheet } from 'react-native';
 
 const originalRenderFn = (Text as any).render;
 
-export function overrideTextRender() {
+export function overrideTextRenderFn() {
   class FontManager {
     applyOverrides() {
       (Text as any).render = this.overrideRenderFn;

@@ -1,7 +1,7 @@
 import dedent from 'ts-dedent';
 import { FontFace } from '../types/FontFace';
-import { extractRemoteFontUrl } from './extractRemoteFontUrl';
-import { extractLocalFontName } from './extractLocalFontName';
+import { getExpoFontMapEntry } from './getExpoFontMapEntry';
+import { getLocalFontName } from './getLocalFontName';
 
 export function generateInlineStyle(fontFace: FontFace) {
   return dedent`
@@ -9,14 +9,14 @@ export function generateInlineStyle(fontFace: FontFace) {
       font-family: '${fontFace.fontFamily}';
       font-style: ${fontFace.fontStyle};
       font-weight: ${fontFace.fontWeight};
-      font-display: swap;
+      font-display: auto;
       src: ${extractSourceString(fontFace)};
     }`;
 }
 
 function extractSourceString(fontFace: FontFace) {
-  const fontName = extractLocalFontName(fontFace);
-  const remoteUrl = extractRemoteFontUrl(fontFace);
+  const fontName = getLocalFontName(fontFace);
+  const remoteUrl = getExpoFontMapEntry(fontFace);
   if (remoteUrl) {
     return `local('${fontFace.fontFamily}'), local('${fontName}'), url(${remoteUrl.url}) format('${remoteUrl.format}')`;
   } else {

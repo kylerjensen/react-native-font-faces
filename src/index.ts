@@ -6,4 +6,4 @@ export * from './types/FontWeight';
 
 export * from './samples/Roboto';
 
-export * from './contexts/FontFacesProvider';
+export * from './utilities/enableFontFaces';
