@@ -1005,13 +1005,14 @@
     "@babel/preset-env" "^7.4.4"
     "@babel/preset-typescript" "^7.3.3"
 
-"@expo/config@3.2.18":
-  version "3.2.18"
-  resolved "https://registry.yarnpkg.com/@expo/config/-/config-3.2.18.tgz#48d81d0047e3329c8d27ff2f3f7233d99b40d5a7"
-  integrity sha512-n8O981DlpvrnaWv1xMIdUdRZ2VIm2cnTkO+JCInt+hcYWx1xXeyyazb+aT6AmdAqPV3t2aDDuRp7801r9nkqKw==
+"@expo/config@3.2.21":
+  version "3.2.21"
+  resolved "https://registry.yarnpkg.com/@expo/config/-/config-3.2.21.tgz#786e998245a212b76235c3be82560060af832834"
+  integrity sha512-Q+RB4lIx8f/39o5suB/O41dKgKGgEQSb0thsIaKGXC1LE7Z5zQtxtSbDAUGsWCKNSOV0KacsCdo7ovLMtYCLJw==
   dependencies:
     "@babel/register" "^7.8.3"
     "@expo/babel-preset-cli" "0.2.17"
+    "@expo/image-utils" "0.3.3"
     "@expo/json-file" "8.2.22"
     "@expo/plist" "0.0.9"
     fs-extra "9.0.0"
@@ -1039,13 +1040,15 @@
     xcode "^3.0.0"
     xml-js "^1.6.11"
 
-"@expo/image-utils@0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@expo/image-utils/-/image-utils-0.3.1.tgz#e222c3bc81df0ac79649287647ab3dc0806c69f3"
-  integrity sha512-xrdNnyczAiOBydMz+VMnkGij3Y/AE9jfLgkot65EqqDNbFLqPElTvJaZ6rY+LZOL2C1PtLaDzcp0yzse9K5DuQ==
+"@expo/image-utils@0.3.3":
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/@expo/image-utils/-/image-utils-0.3.3.tgz#c7f3377d534d9aad470d16997e73d3cdedd0f30d"
+  integrity sha512-XSPbUYMUmBVfEMoY+JVJVtiCi3/oQl3NMVpoDWPW/HVa2jqK4pz9xjks4F8QcMep1/DsisclLWDeuFOMzJqwLw==
   dependencies:
     "@expo/spawn-async" "1.5.0"
+    chalk "^4.0.0"
     fs-extra "9.0.0"
+    getenv "0.7.0"
     jimp "^0.9.6"
     mime "^2.4.4"
     node-fetch "^2.6.0"
@@ -1088,21 +1091,21 @@
   dependencies:
     lodash "^4.17.4"
 
-"@expo/webpack-config@^0.12.23":
-  version "0.12.23"
-  resolved "https://registry.yarnpkg.com/@expo/webpack-config/-/webpack-config-0.12.23.tgz#61a10130e0525596b5e97857eba0741955d61d8e"
-  integrity sha512-ydY3TOowOM4uBqNun1W0RmmC1PNibP/7tmaYmABqj885NApySzjFKcZ9B5owXzxv+NFPRH6Q6IEIPQMcKuLYLQ==
+"@expo/webpack-config@^0.12.27":
+  version "0.12.27"
+  resolved "https://registry.yarnpkg.com/@expo/webpack-config/-/webpack-config-0.12.27.tgz#fbfa8ee43318cee3b35592d60190a610bdf4861d"
+  integrity sha512-KBu8ycbpRWzcuK9OXPnAF/mC771inLOcFPZNFkCX2CIgXhg1jJOfADcJsCAxwTJ5RFIXdBHS4sDMi7c8E+D+KA==
   dependencies:
     "@babel/core" "7.9.0"
     "@babel/runtime" "7.9.0"
-    "@expo/config" "3.2.18"
+    "@expo/config" "3.2.21"
     "@pmmmwh/react-refresh-webpack-plugin" "^0.3.3"
     babel-loader "8.1.0"
     chalk "^4.0.0"
     clean-webpack-plugin "^3.0.0"
     copy-webpack-plugin "~6.0.3"
     css-loader "~3.6.0"
-    expo-pwa "0.0.30"
+    expo-pwa "0.0.33"
     file-loader "~6.0.0"
     find-yarn-workspace-root "~2.0.0"
     getenv "^0.7.0"
@@ -4314,13 +4317,13 @@ expo-permissions@~9.0.1:
   resolved "https://registry.yarnpkg.com/expo-permissions/-/expo-permissions-9.0.1.tgz#dc10b58654bbe39bbbed5827369942b01b08055e"
   integrity sha512-CosJgy8XQRN/OFG2JTQDcFxz3XTGi27coCMym/hVXWtQfk0z6PwdRG5IXHfLGuSckwIcgmirrwm2+Zc0X3MmNg==
 
-expo-pwa@0.0.30:
-  version "0.0.30"
-  resolved "https://registry.yarnpkg.com/expo-pwa/-/expo-pwa-0.0.30.tgz#872bd4eb9aacbf0f7855ed895362edbb42e56c32"
-  integrity sha512-dqp0g0SZtJygNq6jKMqPeVD+dXvq8F9JA3jAFhofgarMfIf/5mm/e1v99h2VZzj6oCB1sUsIq9MGlyToCC4yeQ==
+expo-pwa@0.0.33:
+  version "0.0.33"
+  resolved "https://registry.yarnpkg.com/expo-pwa/-/expo-pwa-0.0.33.tgz#721cc6db97da55470417e2abf0c651cfd8253347"
+  integrity sha512-0/PNbgYi6O59IRAIrRlcmOpHtlz/mfWlxPiv8KLSIjOvmJrYi8dQ+upsgCDIrvNGcxZuW4K2n6Bf6mCosC0s+g==
   dependencies:
-    "@expo/config" "3.2.18"
-    "@expo/image-utils" "0.3.1"
+    "@expo/config" "3.2.21"
+    "@expo/image-utils" "0.3.3"
     "@expo/json-file" "8.2.22"
     chalk "^4.0.0"
     commander "2.20.0"
@@ -4868,7 +4871,7 @@ get-value@^2.0.3, get-value@^2.0.6:
   resolved "https://registry.yarnpkg.com/get-value/-/get-value-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
   integrity sha1-3BXKHGcjh8p2vTesCjlbogQqLCg=
 
-getenv@^0.7.0:
+getenv@0.7.0, getenv@^0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/getenv/-/getenv-0.7.0.tgz#39b91838707e2086fd1cf6ef8777d1c93e14649e"
   integrity sha1-ObkYOHB+IIb9HPbvh3fRyT4UZJ4=
