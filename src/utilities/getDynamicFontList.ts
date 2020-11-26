@@ -1,5 +1,5 @@
 import { FontFace } from '../types/FontFace';
-import { DynamicFontList } from 'src/types/DynamicFontList';
+import { DynamicFontList } from '../types/DynamicFontList';
 import { getDynamicFontListEntry } from './getDynamicFontListEntry';
 
 export function getDynamicFontList(fontFaces: FontFace[]): DynamicFontList {

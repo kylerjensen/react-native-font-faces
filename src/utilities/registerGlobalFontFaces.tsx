@@ -1,4 +1,4 @@
-import { FontFace } from 'src/types/FontFace';
+import { FontFace } from '../types/FontFace';
 import { globalFontFaces } from './globalFontFaces';
 import { getLocalFontName } from './getLocalFontName';
 
