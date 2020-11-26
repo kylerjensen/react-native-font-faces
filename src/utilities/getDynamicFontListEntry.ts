@@ -1,7 +1,7 @@
 import { FontFace } from '../types/FontFace';
 import { explodeToArray } from './explodeToArray';
 import { getLocalFontName } from './getLocalFontName';
-import { DynamicFontListEntry } from 'src/types/DynamicFontListEntry';
+import { DynamicFontListEntry } from '../types/DynamicFontListEntry';
 
 export function getDynamicFontListEntry(fontFace: FontFace): DynamicFontListEntry | undefined {
   for (const source of explodeToArray(fontFace.src)) {

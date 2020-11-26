@@ -1,5 +1,5 @@
 import { FontFace } from '../types/FontFace';
-import { ExpoFontMap } from 'src/types/ExpoFontMap';
+import { ExpoFontMap } from '../types/ExpoFontMap';
 import { getLocalFontName } from './getLocalFontName';
 import { getExpoFontMapEntry } from './getExpoFontMapEntry';
 
