@@ -10,6 +10,7 @@
   "repository": "https://github.com/Kjens93/react-native-font-faces.git",
   "description": "Easily emulate @font-face behavior in react-native",
   "files": [
+    "src",
     "dist"
   ],
   "scripts": {
