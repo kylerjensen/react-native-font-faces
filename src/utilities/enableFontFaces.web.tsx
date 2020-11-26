@@ -1,5 +1,5 @@
 import { FontFace } from '../types/FontFace';
-import { EnableFontFacesResult } from 'src/types/EnableFontFacesResult';
+import { EnableFontFacesResult } from '../types/EnableFontFacesResult';
 import { generateInlineStyleSheet } from './generateInlineStyleSheet';
 
 export function enableFontFaces(fontFaces: FontFace[]): EnableFontFacesResult {

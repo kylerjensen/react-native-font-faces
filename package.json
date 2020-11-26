@@ -16,7 +16,8 @@
   "scripts": {
     "test": "jest",
     "build": "bob build",
-    "release": "semantic-release"
+    "release": "semantic-release",
+    "prepack": "yarn build"
   },
   "dependencies": {
     "redent": "^3.0.0",
