@@ -1042,10 +1042,10 @@
   resolved "https://registry.yarnpkg.com/@expo/config-types/-/config-types-40.0.0-beta.2.tgz#4fea4ef5654d02218b02b0b3772529a9ce5b0471"
   integrity sha512-t9pHCQMXOP4nwd7LGXuHkLlFy0JdfknRSCAeVF4Kw2/y+5OBbR9hW9ZVnetpBf0kORrekgiI7K/qDaa3hh5+Qg==
 
-"@expo/config@3.3.21", "@expo/config@^3.3.18":
-  version "3.3.21"
-  resolved "https://registry.yarnpkg.com/@expo/config/-/config-3.3.21.tgz#e4aad368cebd222053c72f82b67990bc98c7bfe2"
-  integrity sha512-xwWJMnStU1Lx4H+A63egfsiUmOp8VPFCibUEPd+fMn3KkqmLKnaNKZ5McF8Z59nw9UF8qH7AUS9jY77kDlNY5w==
+"@expo/config@3.3.22", "@expo/config@^3.3.18":
+  version "3.3.22"
+  resolved "https://registry.yarnpkg.com/@expo/config/-/config-3.3.22.tgz#af77c98a5b4773d05467e79357ddd7950d99baf6"
+  integrity sha512-BzahndK+Uxsvzui1+9QiJXptjVPgbSCQ3saNVF4N3Wrxjyr0WXHNp3Gz3VAGkoHhoBlxZheslmiNoMwjG25xjw==
   dependencies:
     "@babel/core" "7.9.0"
     "@expo/babel-preset-cli" "0.2.18"
@@ -1107,21 +1107,21 @@
     lodash.pick "^4.4.0"
     lodash.template "^4.5.0"
 
-"@expo/webpack-config@^0.12.51":
-  version "0.12.51"
-  resolved "https://registry.yarnpkg.com/@expo/webpack-config/-/webpack-config-0.12.51.tgz#978cf23443c86618bce74920191c164582036b06"
-  integrity sha512-cjRNg+Isp/Rf+Hd00hlb9Wv1oOZceWy3mmZYZdRTiQBohMZ6CtmZhkarKvVVqAtUrVYnOzEYw6lTmegbHGfbig==
+"@expo/webpack-config@^0.12.52":
+  version "0.12.52"
+  resolved "https://registry.yarnpkg.com/@expo/webpack-config/-/webpack-config-0.12.52.tgz#b208ccf403b21eb6839b4fb1bcce6ba6993ff14c"
+  integrity sha512-OOxIMaKa2O4JPDZpNMc+G40Z5MoOoRwvfU+331+ydqGzPDAev8/PtalnQbJTuqjVaU99QzVlrn1BfLWwJ/3fig==
   dependencies:
     "@babel/core" "7.9.0"
     "@babel/runtime" "7.9.0"
-    "@expo/config" "3.3.21"
+    "@expo/config" "3.3.22"
     "@pmmmwh/react-refresh-webpack-plugin" "^0.3.3"
     babel-loader "8.1.0"
     chalk "^4.0.0"
     clean-webpack-plugin "^3.0.0"
     copy-webpack-plugin "~6.0.3"
     css-loader "~3.6.0"
-    expo-pwa "0.0.57"
+    expo-pwa "0.0.58"
     file-loader "~6.0.0"
     find-yarn-workspace-root "~2.0.0"
     getenv "^0.7.0"
@@ -4169,12 +4169,12 @@ expo-permissions@~10.0.0:
   resolved "https://registry.yarnpkg.com/expo-permissions/-/expo-permissions-10.0.0.tgz#5b31c54d561d00c7e46cd02321bc3704c51c584b"
   integrity sha512-b6oitd4JmFdQ7DxczZ2WRS9aDyqgVM7lEhy3JyKZ2dbU19C6NyHyLCcwssZgfzOfGnp2owoaWn3KU4zdrF5MIA==
 
-expo-pwa@0.0.57:
-  version "0.0.57"
-  resolved "https://registry.yarnpkg.com/expo-pwa/-/expo-pwa-0.0.57.tgz#f6a0615364a1597ece927aab0ed26c5a6143ae1d"
-  integrity sha512-5yWdnZcuLveQX4Re3gDrtHIVBlVVpqySAAQwxuJgK4xAiCwEpdWhNtXcuTGh+0DPwf3aOkmfPDvLrKmKf902pA==
+expo-pwa@0.0.58:
+  version "0.0.58"
+  resolved "https://registry.yarnpkg.com/expo-pwa/-/expo-pwa-0.0.58.tgz#0a0ade596c8d51e7a6c43ff89be3656347af605b"
+  integrity sha512-dbPKRQyr5vtpa8/fmBoRzNs1SYkTWosXvcJJhIfGVGvb8ZMPduruydczM+lavBjZmufdlOL4e8CWNXcr4NRz9g==
   dependencies:
-    "@expo/config" "3.3.21"
+    "@expo/config" "3.3.22"
     "@expo/image-utils" "0.3.9"
     "@expo/json-file" "8.2.25"
     chalk "^4.0.0"
