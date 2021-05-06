@@ -32,7 +32,7 @@
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-typescript": "^7.10.4",
     "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/config-conventional": "^12.1.1",
     "@react-native-community/bob": "^0.16.2",
     "@types/jest": "^26.0.8",
     "@types/react": "^17.0.0",
