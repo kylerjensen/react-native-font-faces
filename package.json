@@ -20,7 +20,7 @@
     "prepack": "yarn build"
   },
   "dependencies": {
-    "redent": "^3.0.0",
+    "redent": "^4.0.0",
     "ts-dedent": "^2.0.0"
   },
   "peerDependencies": {
