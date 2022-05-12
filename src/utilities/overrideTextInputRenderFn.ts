@@ -12,12 +12,15 @@ export function overrideTextInputRenderFn() {
     }
 
     overrideRenderFn(...args: any[]) {
-      const element = originalRenderFn.call(this, ...args);
-      const fontFaces = Object.values(globalFontFaces);
-      const originalStyle: TextStyle = StyleSheet.flatten([element.props.style]);
-      const overrideStyle: TextStyle = generateOverrideStyle(fontFaces, originalStyle);
-      const flattenedStyle: TextStyle = StyleSheet.flatten([originalStyle, overrideStyle]);
-      return React.cloneElement(element, { style: flattenedStyle });
+      if (args.length && args[0].style) {
+        const fontFaces = Object.values(globalFontFaces);
+        const originalStyle: TextStyle = StyleSheet.flatten([args[0].style]);
+        const overrideStyle: TextStyle = generateOverrideStyle(fontFaces, originalStyle);
+        const flattenedStyle: TextStyle = StyleSheet.flatten([originalStyle, overrideStyle]);
+        args.splice(0, 1, { ...args[0], style: flattenedStyle });
+      }
+
+      return originalRenderFn.call(this, ...args);
     }
   }
 
